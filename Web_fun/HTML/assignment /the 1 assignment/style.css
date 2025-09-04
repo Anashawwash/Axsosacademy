@@ -1,0 +1,30 @@
+#top_page{
+    color: white;
+    background-color: black;
+    height: 20px;
+    text-align: justify;
+    font-style: italic;
+    font-weight: lighter;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-bottom: 20px;"
+}
+#mid_page{
+    color:white;
+    background-color: #673399;
+    text-align:center;
+    height: 35px;
+    padding-top: 10px;
+}
+
+#last_page{
+    color: blueviolet;
+    background-color:#9fc5f8;
+    text-align: right;
+    text-decoration:underline;
+    height: 30px;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    padding-right: 10px;
+}
