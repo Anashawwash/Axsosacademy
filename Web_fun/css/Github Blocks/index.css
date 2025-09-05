@@ -13,9 +13,10 @@
     text-align: center;   
 }
 #img{
-    top: 7%;
-width: 300px;
+    top: 15%;
+/* width: 300px; */
 position: absolute; 
+width: 28%;
 }
 #row{
     height: 350px;
@@ -28,15 +29,15 @@ position: absolute;
     
 }
 .f-img-in-f-row{
-right: 2%;
+right: 1%;
 top: 7%;
 }
 .sec-img-f-row{
 
-    right: 37%;
+    right: 36%;
 }
 .therd-img-f-row{
-    right: 72%;
+    right: 71%;
 }
 .secrow
 {
