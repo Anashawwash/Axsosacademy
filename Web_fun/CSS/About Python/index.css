@@ -1,0 +1,167 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 970px;
+    background-color: b</div>lue;
+    margin: 0 auto;
+
+}
+
+.header {
+
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toppage {
+    position: relative;
+    height: 560px;
+    background-color: #245075;
+    border-bottom: #173753 solid 5px;
+}
+
+.mainlogo {
+    width: 65%;
+    padding-top: 30px;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.Text {
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 20px;
+}
+
+.Button {
+    display: flex;
+    height: 60px;
+    background-color: #444444;
+    width: 200px;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    border-radius: 6%;
+}
+
+.fbutton {
+    width: 120px;
+    height: 50%;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    gap: 15px;
+    background-color: #487FAC;
+    width: 80%;
+    margin: 0 auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.blue-list {
+    background-color: #487FAC;
+    border: 0px;
+    color: white;
+    font-size: 20px;
+}
+
+.left-float {
+    float: left;
+    height: 300px;
+    width: 250px;
+    color: white;
+
+}
+
+.sec-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    right: 75%;
+}
+
+
+.rigth-float {
+    float: right;
+    height: 100px;
+    width: 650px;
+    color: white;
+    display: flex;
+    position: absolute;
+    left: 26%;
+
+}
+
+.last-float {
+    position: absolute;
+    right: 10%;
+    float: right;
+    height: 100px;
+    width: 500px;
+    color: #ECCA44;
+    top: 50%;
+}
+
+#lonly {
+    color: white;
+    text-align: center;
+    width: 270px;
+}
+
+.contant {
+    position: relative;
+    height: 300px;
+}
+
+.left-contant {
+    position: absolute;
+    right: 45%;
+    text-align: center;
+    height: 300px;
+    border-top: solid #74A7d6 5px;
+    margin: 25px 25px 0px 25px;
+    width: 380px;
+    float: left;
+}
+
+.rigth-contant {
+    position: absolute;
+    left: 54%;
+    text-align: center;
+    border-top: solid #74A7d6 5px;
+    margin: 25px 25px 0px 2px;
+    float: right;
+    width: 380px;
+}
+
+.rigth-list {
+    color: blue;
+}
+
+.footer {
+    background-color: #245075;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #88BBEb;
+    position: relative;
+}
+
+#link {
+    color: #C78022;
+}

@@ -1,0 +1,297 @@
+.header{
+    display: flex;
+    width: 100%;
+    background-color: #000000;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #fafafa;
+
+    height: 70px;
+
+}
+.leftnav{
+    display: flex;
+    align-items: center;
+}
+
+.list{
+    display: flex;
+    list-style-type: none;
+}
+.list li {
+    padding: 15px;
+}
+.ritghnav{
+    width: 100px;
+    height: 35px;
+    background-color:#33a2b8;
+    color: white;
+    border: black solid;
+}
+
+
+#best{
+    font-size: 20px;
+    color: #b9b9b9;
+}
+
+.contant{
+/* background-color: yellowgreen; */
+height: 100px;
+display: flex;
+width: 55%;
+justify-content: center;
+margin: 25px auto;
+
+}
+.leftcont{          
+    flex: 2;
+    justify-content: center;
+    width: 100%;
+    height: 600px;
+    background-color: ;
+}
+.img{
+    width: 110px;
+    height: 115px;
+    border-radius: 60px;
+    border: 2px solid grey;
+    position: absolute;
+    transition: -50% -50%;
+    top:14%;
+    z-index: +1;
+    left: 10%;
+}
+.topleft{
+    width: 99.6%;
+    height: 400px;
+    position: relative;
+}
+.ftopleft{
+    background-color: rgb(51 162 184);;
+    width: 99.3%;
+    height: 120px;
+    border:rgb(205 205 205) solid 2px;
+
+
+}
+
+.towtopleft{
+    height: 270px;
+    background-color:white;
+    border: rgb(205 205 205) solid 3px;
+    position: relative;
+}
+
+.rigthcont{
+    flex: 1;
+    margin left: 20px;
+    height: 500px;
+}
+.bottom{
+    background-color: ;
+    height: 300px;
+    width: 100%px;
+    margin-top:20px;
+}
+.topbottom{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(51 51 51);
+    color: white;
+    text-align: start;
+}
+.towbottom{
+    background-color: white;
+    height: 130px;
+    width: 99%;
+    border: rgb(205 205 205) solid 3px;
+}
+
+.frigthtop{
+    width: 100%;
+    background-color: rgb(51 51 51);
+    height: 60px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Requests{
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    background-color: rgb(204 204 204);
+    color: black;
+    margin-right: 15px;
+
+}
+.towrigthtop{
+    height: 150px;
+    width: 98.3%;
+    border: rgb(205 205 205) solid 3px;
+    margin-left: 20px;
+    text-align: center;
+    position: relative;
+    padding-top: 6px ;
+
+}
+#accept{
+    position: absolute;
+    top: 15%;
+    right: 20%;
+    height: 30px;
+
+}
+#reject{
+    height: 30px;
+    position: absolute;
+    right: 5%;
+    top: 15%;
+}
+#towaccept{
+    position: absolute;
+    height: 30px;
+    right: 20%;
+    top: 56%;
+}
+#towreject{
+    position: absolute;
+    height: 30px;
+    right: 5%;
+    top: 56%;
+}
+
+
+#phil{
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+}
+
+#todd{
+    position: absolute;
+    width: 50px;
+    border-radius: 50%;
+    left: 10%;
+    top: 50%;
+}
+#setplace{
+    padding-top: 15px;
+}
+
+.frigthbottom{
+    width: 100%;
+    background-color: rgb(51 51 51);
+    height: 50px;
+    margin: 20px 0px 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.towrigthbottom{
+    height: 220px;
+    background-color: white;
+    border: rgb(205 205 205) solid 3px;
+    margin-left: 20px;
+    width: 98%;
+    align-content:center ;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+}
+#yourConnection{
+    border-radius: 50%;
+    width: 60px;
+    height: 30px;
+    margin-right: 25px;
+}
+.lastrigthbottom{
+    width: 98.3%;
+    margin-left: 20px;
+    height: 40px;
+    border: rgb(205 205 205) solid 3px;
+    display: flex;
+    align-content: center;
+}
+
+#last{
+margin: 8px 0px 0px 15px;
+font-size: large;
+}
+#first{
+    border: #000000 solid 2px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8%;
+    left: 10%;
+}
+#tow{
+    border: #000000 solid 2px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    top: 30%;
+
+}
+#therd{
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    left: 10%;
+    top: 52%;
+    border: #000000 solid 2px;
+
+}
+
+#fourth{
+    position: absolute;
+    width: 40px;
+    left: 10%;
+    border-radius: 50%;
+    top: 74%;
+    border: #000000 solid 2px;
+}
+
+
+.best{
+margin-left: 25px;
+}
+#gear{
+    width: 20px;
+    position: absolute;
+    top: 86%;
+    right: 93%;
+}
+#push{
+    margin-top: 25px;
+    padding-top:20px;
+}
+#map{
+    position: absolute;
+    width: 20px;
+    top: 38%;
+    right: 93%;
+}
+#hard{
+    padding-left: 25px;
+    font-size: 22px;
+}
+#hope{
+    padding-left: 25px;
+}
+#fhope{
+    padding: 5px 0px 0px 25px;
+}
+#towhope{
+    padding-left: 25px;
+}
+.lasthope{
+    color:#7e7e7e ;
+}
