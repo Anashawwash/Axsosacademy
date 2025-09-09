@@ -1,0 +1,89 @@
+.headerBack {
+    background-color: #9fc5f8;
+    height: 80px;
+}
+
+.header {
+    width: 60%;
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.mainLogo {
+    font-family: sans-serif;
+    color: white;
+}
+
+.navbar {
+    justify-items: center;
+    display: flex;
+    width: 300px;
+    list-style-type: none;
+    justify-content: space-between;
+    font-size: 20px;
+    color: white;
+    align-items: center;
+}
+
+.city{
+    width: 60%;
+    margin: 0 auto;
+    border-bottom: solid black 2px;
+    display: flex;
+    justify-content: space-between;
+}
+.selector{
+    display: flex;
+    gap: 15px;
+    align-items:center;
+}
+
+.mainContant{
+    width: 60%;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.day{
+    width: 150px;
+    background-color: #eeeeee;
+    text-align: center;
+}
+.img{
+    width: 90px;
+    border-radius: 50%;
+}
+.dayInfo{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.footer{
+    width: 60%;
+    margin: 0 auto;
+    border: solid black 3px;
+    height: 100px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.midcontant{
+    width: 825px;
+}
+.accept-btn{
+    border: solid black 2px;
+    border-bottom: solid black 3px;
+    border-right: solid black 4px;
+    background-color:#9fc5f8;
+    margin-right: 20px;
+}
+.likeLink{
+    color: blue;
+    text-decoration: underline;
+}

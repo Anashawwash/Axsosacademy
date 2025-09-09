@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <!-- the header div will have nav par and main logo -->
+    <div class="headerBack">
+        <div class="header">
+            <h1 class="mainLogo">DojoWeather</h1>
+            <div class="navbar">
+                <ul class="navbar">
+                    <li onclick="printLoding()">Nablus</li>
+                    <li onclick="printLoding()">Ram alla</li>
+                    <li onclick="printLoding()">Dallas</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- this div will have the name of the city and c or f selector -->
+    <div class="city">
+        <h1>San Jose</h1>
+        <div class="selector">
+            <h4>Show temp In</h4>
+            <select onchange="changeTo(this)" id="">
+                <option value="C">&deg;C</option>
+                <option value="F">&deg;F</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- this div will have the info about each day -->
+    <div class="mainContant">
+        <div class="today day">
+            <h1>Today</h1>
+            <img class="img" src="/style/some_rain.png" alt="">
+            <h4>some rain</h4>
+            <div class="dayInfo">
+                <h3 class="converter">24c&deg;</h3>
+                <h3 class="converter" >18c&deg;</h3>
+            </div>
+        </div>
+        <div class="tomorrow day">
+            <h1>Tomorrow</h1>
+            <img class="img" src="/style/some_sun.png" alt="">
+            <h4>some sun</h4>
+            <div class="dayInfo">
+                <h3 class="converter">27c&deg;</h3>
+                <h3 class="converter">19c&deg;</h3>
+            </div>
+
+        </div>
+        <div class="friday day">
+            <h1>Friday</h1>
+            <img class="img" src="/style/some_clouds.png" alt="">
+            <h4>some clouds</h4>
+            <div class="dayInfo">
+                <h3 class="converter">21c&deg;</h3>
+                <h3 class="converter">16c&deg;</h3>
+            </div>
+
+        </div>
+        <div class="saturday day">
+            <h1>Saturday</h1>
+            <img class="img" src="/style/some_sun.png" alt="">
+            <h4>some sun</h4>
+            <div class="dayInfo">
+                <h3 class="converter">26c&deg;</h3>
+                <h3 class="converter">21c&deg;</h3>
+            </div>
+
+        </div>
+    </div>
+    <!-- this is the footer div it will have the cookie Accept -->
+    <div class="footer">
+        <img src="/style/cookie.png" alt="">
+        <div class="midcontant">
+            <h3>Stop! Cookie Time</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione corrupti voluptates repellat ex blanditiis amet accusamus numquam debitis? Dolorum animi a magnam perferendis officiis harum eius, architecto inventore laudantium. Dolor. <span class="likeLink">Read More</span> </p>
+        </div>
+        <button onclick="rmDiv()" class="accept-btn">I Accept</button>
+
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
