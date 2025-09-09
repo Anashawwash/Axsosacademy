@@ -1,0 +1,95 @@
+.header{
+    height: 60px;
+    width: 80%;
+    background-color: black;
+    margin: 0 auto;
+    color: white;
+}
+
+.Net{
+padding: 10px 0px 0px 20px;
+}
+
+.Feed-sec{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+.pepole{
+    height: 900px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.likeOther{
+    width: 60%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.lestofpepole{
+    height: 200px;
+    border: solid black 2px;
+}
+
+.top-contant{
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+.rigth{
+    display: flex;
+    justify-content: space-between;
+    width:30%;
+    margin: 15px 20px 0px 0px ;
+}
+
+.main_Button{
+    width: 130px;
+    height: 50px;
+    background-color:#fbd966;
+    border: solid black 2px;
+    border-bottom: black solid 5px;
+    border-right: solid black 5px;
+}
+
+.left{
+    width: 130px;
+    margin: 10px 20px 0px 0px ;
+    justify-items: center;
+}
+
+
+.more-Info{
+    color: blue;
+    text-decoration: underline;
+}
+.even-more{
+    /* padding: 0px 15px 0px 20xp; */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.myacc{
+    height: 300px;
+    width:30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    border: solid black 2PX;
+}
+#userImg{
+    height: 150px;
+    width: 40%;
+    margin: 0 auto;
+}
+.hope{
+    margin: 0 auto;
+    padding: 20px;
+}
