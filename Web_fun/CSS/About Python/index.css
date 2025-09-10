@@ -154,7 +154,7 @@
 
 .footer {
     background-color: #245075;
-    height: 150px;
+    height: 130px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -164,4 +164,11 @@
 
 #link {
     color: #C78022;
+}
+
+.again{
+    position: absolute;
+    right: 45%;
+    bottom: -2%;
+    color: #88BBEb;
 }
