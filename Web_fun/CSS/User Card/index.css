@@ -1,0 +1,46 @@
+.main{
+    border: solid #33a2b8 2px ;
+    height: 400px;
+    width: 40%;
+    margin: 0 auto;
+    position: relative;
+}
+.logo{
+    position: absolute;
+}
+
+.header{
+    width: 100%;
+    background-color: #33a2b8;
+    height: 90px;
+}
+
+.firstImg{
+    width: 100px;
+    left: 7%;
+    top: 12%;
+    border: white solid 5px;
+    border-radius: 50%;
+}
+.noun{
+    height: 50px;
+}
+
+.secImg{
+    width: 15px;
+    top: 55%;
+    left: 2%;
+}
+.nothing{
+    padding-left: 12px;
+    position: relative;
+}
+.must{
+    padding-left:20px;
+}
+
+.theirdImg{
+    width: 15px;
+    left: 2%;
+
+}
