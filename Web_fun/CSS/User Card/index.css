@@ -28,7 +28,7 @@
 
 .secImg{
     width: 15px;
-    top: 55%;
+    top: 50%;
     left: 2%;
 }
 .nothing{
@@ -43,4 +43,7 @@
     width: 15px;
     left: 2%;
 
+}
+.last{
+    padding-top: 45px;
 }
