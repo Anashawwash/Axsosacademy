@@ -1,0 +1,234 @@
+.mainlogo {
+    height: 70px;
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.mainContent {
+    width: 100%;
+    margin: 0 auto;
+    height: 10px;
+}
+
+.Bigpro {
+    position: absolute;
+    position: relative;
+    top: 2%;
+    left: 1%;
+    width: 300px;
+    height: 100px;
+
+}
+
+.mainLogoTopic {
+    position: absolute;
+    left: 30%;
+    width: 300px;
+    top: 20%;
+    color: #464646;
+    font-family: sans-serif;
+}
+
+.internetLogo {
+    position: absolute;
+    width: 100px;
+    right: 70%;
+    top: 5%;
+}
+
+#blueText {
+    color: #24649c;
+}
+
+.BlueText {
+    color: #3b97a6;
+}
+
+.header {
+    width: 60%;
+    background-color: #4a7eaa;
+    height: 60px;
+    margin: 0 auto;
+}
+
+
+.mainTopic {
+    color: white;
+    padding: 10px 0px 0px 10px;
+    font-family: sans-serif, Helvetica;
+}
+
+.leftNavAndTopSec {
+    width: 60%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.sideNav {
+    width: 25%;
+    height: 500px;
+}
+
+.callus {
+    height: 60px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftCallUs {
+    display: flex;
+    justify-content: space-between;
+    width: 45px;
+    margin-top: 10px;
+}
+
+.home {
+    width: 20px;
+    height: 20px;
+    margin-top: 0px;
+    color: #4984b6;
+}
+
+
+.rightCallUs {
+    display: flex;
+
+}
+
+.whatslogo {
+    width: 40px;
+    margin: 5px 5px 0px 0px;
+}
+
+.numbers {
+    margin: 0px;
+}
+
+.but {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 3px;
+    border-bottom: solid black 1px;
+}
+
+.butn {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 35px;
+    color: white;
+
+}
+
+.first_butn {
+    background-color: #4984b6;
+    border: 1px solid #4984b6;
+}
+
+.secand_butn {
+    background-color: #EAAA4e;
+    border: 1px solid #EAAA4e;
+    margin-bottom: 20px;
+}
+
+.background {
+    height: 250px;
+    width: 90%;
+    background-image: url(/images/ad_background.png);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ninja {
+    width: 90px;
+    margin: 0 auto;
+}
+
+.ninja_P {
+    padding: 10px 10px 0px 10px;
+    margin-bottom: 0px;
+}
+
+.ninjabutn {
+    height: 25px;
+    margin-top: 10px;
+    color: white;
+    background-color: #4fcbe0;
+    border: solid #4fcbe0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.firstTopic {
+    width: 60%;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.centerPage {
+    width: 80%;
+    height: 400px;
+    padding-left: 20px;
+}
+
+.Clients {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.gaping {
+    margin: 10px 0px 5px 0px;
+}
+
+.alotof {
+    list-style-type: disc;
+}
+
+.clientIMG {
+    width: 100%;
+    display: flex;
+}
+
+.Servres_img {
+    width: 330px;
+
+    margin: 0 auto;
+}
+
+.bText {
+    color: #24649c;
+    margin-bottom: 5px;
+}
+.order{
+    margin-top: 0px;
+}
+.real_last{
+    border: #24649c solid 4px;
+    height: 150px;
+    border-bottom: 0px;
+    display: flex;
+}
+.HTML{
+    width: 150px;
+    padding: 10px 0px 0px 10px;
+}
+.lastDiv{
+    padding-left: 15px;
+    width: 60%;
+    height: 200px;
+    padding-top: 10px;
+}
+.last{
+    padding-top: px;
+    margin: 8px;
+}
