@@ -1,0 +1,333 @@
+.theThing{
+    position: relative;
+}
+.fisrt_sec {
+    background-image: url(/images/calculator-bg.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.header {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 16px;
+    position:fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+.scrolled{
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 16px;
+    position:fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #181d2f;
+}
+
+.listInTheHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.list {
+    background: inherit;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+#home {
+    color: #f6501c;
+}
+
+.supportButn {
+    background-color: #43bb7f;
+    border: none;
+    width: 135px;
+    height: 60px;
+    border-radius: 8px;
+    color: white;
+    margin-right: 20px;
+    margin-right: 0px;
+}
+
+.leftFirstImg {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    width: 80%;
+    position: absolute;
+    right: 10%;
+    gap: 40px;
+    top: 20%;
+
+}
+
+.first_img_mainContent {
+    color: white;
+    width: 65%;
+    font-size: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.smallLIne {
+    border-bottom: solid white 8px;
+    border-radius: 5px;
+    padding-bottom: 25px;
+
+}
+
+#first_img_p {
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.towButtn {
+    height: 180px;
+    width: 40%;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contactButtn {
+    border: none;
+    width: 180px;
+    height: 60px;
+    border-radius: 8px;
+    color: white;
+    background-color: #f6501c;
+    margin-left: 20px;
+}
+
+#DesImg {
+    width: 200px;
+}
+
+.secend_slieder {
+    position: absolute;
+    right: 3%;
+    top: 40%;
+    height: 150px;
+    font-size: 40px;
+    border: none;
+    outline: none;
+    background: inherit;
+    color: white;
+}
+
+.first_slieder {
+    position: absolute;
+    right: 96%;
+    top: 40%;
+    font-size: 40px;
+    height: 150px;
+    border: none;
+    background: inherit;
+    color: white;
+}
+
+
+/* ############# The secend sec$############$#$#$ */
+.sec_sec {
+    height: 650px;
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+
+}
+
+.first_row {
+
+    height: 650px;
+    flex: 1;
+    margin: 25px 25px 0px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.desigin {
+    height: 150px;
+    width: 95%;
+    border: solid #f0f2f4 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.textInBoxes {
+    margin-top: 0px;
+    width: 83%;
+}
+
+.imgInBoxes {
+    height: 70px;
+}
+
+.therd_sec {
+    background-image: url(/images/calculator-bg.jpg);
+    height: 600px;
+    position: relative;
+    display: flex;
+
+}
+
+.women {
+    position: absolute;
+    top: -2%;
+    right: 45%;
+    width: 600px;
+}
+
+.left_therd_sec {
+    flex: 1;
+    margin-right: 25px;
+}
+
+.therd_rgith_sec {
+    height: 700px;
+    width: 50%;
+    flex: 1;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.plan {
+    width: 60%;
+    margin: 0 auto;
+    height: 100px;
+    color: white;
+    padding-top: 25px;
+}
+
+.freedom {
+
+    color: red;
+    font-size: 20px;
+
+}
+
+.login {
+    color: white;
+    width: 60%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.nameAndLogin {
+    display: flex;
+    justify-content: space-between;
+}
+
+.margen {
+    margin-bottom: 0px;
+}
+
+.afterLogin {
+    width: 99%;
+    margin-bottom: 25px;
+    background-color: #5f697c;
+    border: none;
+    border-radius: 5px;
+}
+
+.name {
+    width: 100%;
+}
+
+.email {
+    width: 100%;
+}
+
+.reason {
+    height: 40px;
+    color: white;
+}
+
+.submit {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: red;
+    color: white;
+}
+
+.someOne {
+    height: 600px;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.header_for_someOne {
+    text-align: center;
+}
+
+.true_some_one {
+    height: 360px;
+    border: solid #f0f2f4 3px;
+    display: flex;
+}
+
+.left_some_one {
+    width: 100px;
+    height: 270px;
+    flex: 2;
+    padding: 25px 25px 0px 25px;
+}
+
+.rigth_some_one {
+    flex: 1;
+}
+
+.someOne_img {
+    width: 100%;
+}
+
+
+
+.footer {
+    height: 350px;
+    width: 100%;
+}
+
+.helpingLinks {
+    height: 200px;
+    background-color: #22283F;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.copythings {
+    background-color: #181d2f;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
