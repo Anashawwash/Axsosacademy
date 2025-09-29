@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+
+<body>
+    {% for i in range(y) %}
+    <div class="row">
+        {% if i % 2 == 0 %}
+            {% for j in range(x) %}
+                {% if j % 2 == 0 %}
+                    <div class="boxTow box"></div>
+                {% else %}
+                    <div class="boxOne box"></div>
+                {%endif%}
+            {% endfor %}
+        {% else %}
+            {% for j in range(x) %}
+                {% if j % 2 == 0 %}
+                    <div class="boxOne box"></div>
+                {% else %}
+                    <div class="boxTow box"></div>
+                {%endif%}
+            {% endfor %}
+        {%endif%}
+
+    </div>
+    {% endfor %}
+
+
+</body>
+
+</html>

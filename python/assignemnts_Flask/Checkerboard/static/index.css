@@ -1,0 +1,25 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+} */
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    width: 60px;
+    height: 60px;
+    border: solid black 1px;
+
+
+}
+.boxOne{
+    background-color: green;
+}
+
+
+.boxTow{
+    background-color:yellow;
+}
