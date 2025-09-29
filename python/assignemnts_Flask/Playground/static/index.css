@@ -1,0 +1,19 @@
+.header {
+    text-align: center;
+
+}
+
+.boxOne{
+    background-color: var(--box-color);
+    height: 250px;
+    width: 30%;
+    border: black solid 3px;
+    display: inline-block;
+    margin: 5px;
+}
+
+
+.main{
+    width: 80%;
+    margin: 0 auto;
+}
