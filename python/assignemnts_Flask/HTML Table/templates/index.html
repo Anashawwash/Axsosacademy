@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tailwind CDN Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <table class="mt-12 mx-auto w-[80%] border border-gray-300 table-auto border text-lg">
+        <tr class="border-2 border-black border-solid">
+            <th class="border-2 border-black border-solid px-5 py-2  font-bold  text-black text-left">First Name</th>
+            <th class="border-2 border-black border-solid px-5 py-2  font-bold   text-black text-left">Last Name</th>
+            <th class="border-2 border-black border-solid px-5 py-2  font-bold   text-black text-left">Full name</th>
+        </tr>
+            {% for user in users %}
+              <tr class="border">
+                <td class="border-2 border-black border-solid px-5 py-2 border  text-left text-black">{{ user.first_name }}</td>
+                <td class="border-2 border-black border-solid px-5 py-2 border text-left text-black">{{ user.last_name }}</td>
+                <td class="border-2 border-black border-solid border px-5 py-2text-left text-black">{{ user.first_name }} {{ user.last_name }}</td>
+              </tr>
+            {% endfor %}
+            
+    </table>
+</body>
+</html>
