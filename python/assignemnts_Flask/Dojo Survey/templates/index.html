@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <form action="/" method="post">
+
+
+        <div class="h-120 mt-40 w-[60%] mx-auto border-4 border-solid border-black">
+            <div class="bg-blue w-[80%] h-10 flex justify-between mt-8 mx-auto">
+                <h1 class="text-2xl">Your Name:</h1>
+                <input type="text" name="user_name" class="border-2 border-solid border-black w-45">
+            </div>
+            <div class="bg-blue w-[80%] h-10 flex justify-between mt-8 mx-auto">
+                <h1 class="text-2xl">Dojo location</h1>
+                <select name="City" class="border-2 border-solid border-black w-45">
+                    <option value="San Jose"  >San jose</option>
+                    <option value="option2_value">Option 2 Display Text</option>
+                    <option value="option3_value">Option 3 Display Text</option>
+                </select>
+            </div>
+    
+            <div class="bg-blue w-[80%] h-10 flex justify-between mt-8 mx-auto">
+                <h1 class="text-2xl">favourite language</h1>
+                <select name="fav_language" class="border-2 border-solid border-black w-45">
+                    <option value="Python">python</option>
+                    <option value="java script">java script</option>
+                    <option value="C">C</option>
+                </select>
+            </div>
+            <div class="w-[80%] mx-auto">
+                <h1 class=" text-2xl text-start pb-2 mt-8">Comment (optional)</h1>
+                <div  class="h-30">
+                <textarea name="speak" class="w-[100%]  h-30 border-4 mx-auto"></textarea>
+                </div>
+                <div class="pt-4 flex justify-end">
+                    <button class="bg-green-500 shadow-[4px_4px_black] border-2 w-30 text-2xl">Button</button>
+                </div>
+    
+            </div>
+    
+    
+    
+    
+    
+        </div>
+    </form>
+</body>
+
+</html>
