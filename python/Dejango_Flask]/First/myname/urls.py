@@ -10,8 +10,4 @@ urlpatterns = [
     path('blogs/<int:val>', views.show),
     path('blogs/<int:val>/edit', views.edit),
     path('blogs/<int:val>/delete', views.destroy),
-
-
-
-
 ]
