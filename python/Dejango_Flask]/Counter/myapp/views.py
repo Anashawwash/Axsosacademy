@@ -1,4 +1,4 @@
-from django.shortcuts import render , HttpResponse
+from django.shortcuts import render , HttpResponse,redirect
 
 def index(request):
     
@@ -8,6 +8,12 @@ def index(request):
         count = 1
     request.session['Number'] = count    
     return render(request,'index.html', {'count':count})
+
+
+def go(request):
+    count = 0
+    request.session['Number'] = count    
+    return redirect('/')
 
 
 

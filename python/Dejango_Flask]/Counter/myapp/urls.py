@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     path('',views.index),
+    path('destroy_session',views.go),
 ]
