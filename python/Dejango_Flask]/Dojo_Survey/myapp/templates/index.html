@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+    <form action="/show" method="POST">
+
+        {% csrf_token %} 
+        <div class="w-[40%] mx-auto border-3 h-90 mt-20">
+            <div class="pt-6 flex w-[80%] mx-auto justify-between">
+                <h1 class="text-2xl">Your Name:</h1>
+                <input class="border" type="text" name="User_Name">
+            </div>
+            <div class="pt-6 flex w-[80%] mx-auto justify-between">
+                <h1 class="text-2xl">Dojo location:</h1>
+                <select class="border w-45" name="location" id="">
+                    <option value="San Jon">San</option>
+                </select>
+            </div>
+            <div class="pt-6 flex w-[80%] mx-auto justify-between">
+                <h1 class="text-2xl">Favorite language:</h1>
+                <select class="border w-45" name="language" id="">
+                    <option value="Python">Python</option>
+                    <option value="Java script">Java script</option>
+                    <option value="HTML">HTML</option>
+                </select>
+            </div>
+            <div class="h-20 pt-5 w-[80%] mx-auto">
+                <h1 class="pb-2 text-2xl">Comment(optional)</h1>
+                <textarea class="border w-[100%]  h-20" name="comment" id=""></textarea>
+                <button class=" text-white w-20 ml-97 bg-green-800  shadow-[2px_2px_green]">Button</button>
+            </div>
+
+
+        </div>
+    </form>
+</body>
+
+</html>

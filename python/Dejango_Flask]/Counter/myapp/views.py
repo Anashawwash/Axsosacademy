@@ -14,6 +14,3 @@ def go(request):
     count = 0
     request.session['Number'] = count    
     return redirect('/')
-
-
-

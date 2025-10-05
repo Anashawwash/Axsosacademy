@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+    <div class="w-[40%] mx-auto border-3 h-90 mt-20">
+        <div class="pt-6 flex w-[80%] mx-auto justify-between">
+            <h1 class="text-2xl underline">submitted Info</h1>
+        </div>
+        <div class="pt-6 flex w-[70%] pl-14 justify-between">
+            <h1 class="text-2xl">Name:</h1>
+            <h1 class="text-2xl"> {{request.session.name}}</h1>
+        </div>
+        <div class="pt-2 flex w-[70%] pl-14 justify-between">
+            <h1 class="text-2xl">Dojo location:</h1>
+            <h1 class="text-2xl"> {{request.session.location}} </h1>
+        </div>
+        <div class="pt-2 flex w-[70%] pl-14 justify-between">
+            <h1 class="text-2xl">language: </h1>
+            <h1 class="text-2xl"> {{request.session.lang}} </h1>
+        </div>
+        <div class="pt-2 flex w-[70%] pl-14 justify-between">
+            <h1 class="text-2xl">Comment:</h1>
+            <h1 class="text-2xl"> {{request.session.comment}} </h1>
+        </div>
+
+
+    </div>
+
+    </div>
+</body>
+
+</html>
