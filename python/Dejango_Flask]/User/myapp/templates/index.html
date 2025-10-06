@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+    <div class="w-[80%] mx-auto bg-blue-50 h-200 pt-10">
+        <div>
+            <h1 class=" text-center text-4xl">All the Users</h1>
+        </div>
+        <div class="border-b-3 h-80 mt-5">
+            <div class="overflow-scroll h-80 border-b-2 w-[80%] mx-auto">
+                <table class=" mx-auto border-4 w-[80%]">
+                    <tr class="  bg-gray-400 text-3xl">
+                        <th class="pr-40 border-r-3">id</th>
+                        <th class="pr-40 border-r-3">Name</th>
+                        <th class="pr-40  border-r-3">Email</th>
+                        <th class="pr-40 border-r-3">Age</th>
+    
+                    </tr>
+    
+                    {% for i in users%}
+                    <tr>
+                        <td class="border-r-3 text-2xl">{{ i.id }}</td>
+                        <td class="border-r-3 text-2xl">{{ i.first_name }}</td>
+                        <td class="border-r-3 text-2xl">{{ i.email }}</td>
+                        <td class="border-r-3 text-2xl">{{ i.age }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        <div>
+            <form action="useradd" method="post">
+                {% csrf_token %}
+                 <h1 class="text-4xl text-center pt-5">Add a User</h1>
+                <div class="flex justify-between w-[60%] mx-auto pt-10">
+                    <div class="flex w-[40%] justify-between">
+                        <label class="text-1xl" for="name">First Name</label>
+                        <input class="w-30 border-2" type="text" name="fisrt_name">
+                    </div>
+                    <div class="flex w-[40%] justify-between">
+                        <label class="text-1xl mr-5" for="name">Last Name</label>
+                        <input class="w-30 border-2" type="text" name="last_name">
+                    </div>
+                </div>
+
+
+
+                <div class="justify-between flex w-[60%] mx-auto pt-10">
+                    <div class="flex justify-between w-[40%]">
+                        <label class="text-1xl " for="name">Email</label>
+                        <input class="w-30 border-2" type="text" name="email">
+                    </div>
+                    <div class="flex justify-between w-[40%]">
+                        <label class="text-1xl mr-5" for="name">Age</label>
+                        <input class="w-30 border-2" type="text" name="age">
+                    </div>
+                </div>
+                <div class="flex justify-center pt-10">
+                    <button class="w-10 border-2 shadow-[2px_2px] ">Add</button>
+                </div>
+
+        </div>
+
+        </form>
+
+
+
+    </div>
+</body>
+
+</html>
