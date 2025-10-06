@@ -15,8 +15,7 @@ def create_user(request):
     last_name = request.POST['fisrt_name']
     email = request.POST['email']
     age = request.POST['age']
-    
-    User.objects.create(first_name = first_name, last_name = last_name , email = email ,age = age )
+    User.create_user(first_name, last_name , email , age )
     return redirect('/')
 
 
