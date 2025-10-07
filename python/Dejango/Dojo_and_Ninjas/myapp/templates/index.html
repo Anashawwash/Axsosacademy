@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+
+
+    <div class="w-[80%] mx-auto border-b-3 h-100 flex justify-between">
+        <div class="pt-5 border w-[45%] ">
+            <h1 class="text-3xl text-center">Add a Dojo</h1>
+            <form action="/Dojo" method="post">
+                <input type="hidden" name="hidden" value="Dojo">
+                {% csrf_token %}
+                <div class="flex w-[70%] pt-10 justify-between mx-auto">
+                    <h1 class="text-2xl">Name</h1>
+                    <input name="name" class="border-2" type="text">
+                </div>
+                <div class="flex w-[70%] pt-10 justify-between mx-auto">
+                    <h1 class="text-2xl">City</h1>
+                    <input name="city" class="border-2" type="text">
+                </div>
+                <div class="flex w-[70%] pt-10 justify-between mx-auto">
+                    <h1 class="text-2xl">State</h1>
+                    <input name="state" class="border-2" type="text">
+                </div>
+                <div class="flex justify-center">
+                    <button class="border-2 w-20 mt-10 bg-white shadow-[2px_2px]"> Add</button>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="pt-5 border w-[45%]">
+            <h1 class="text-3xl text-center">Add a Ninja</h1>
+            <form action="/Dojo" method="post">
+                <input type="hidden" name="hidden" value="ninjas">
+
+                {% csrf_token %}
+                <div class="flex w-[70%] pt-10 justify-between mx-auto">
+                    <h1 class="text-2xl">First Name</h1>
+                    <input class="border-2" name="fname"  type="text">
+                </div>
+                <div class="flex w-[70%] pt-10 justify-between mx-auto">
+                    <h1 class="text-2xl">Last Name</h1>
+                    <input class="border-2" name="lname" type="text">
+                </div>
+                <div class="flex w-[70%] pt-10 justify-between mx-auto">
+                    <h1 class="text-2xl">Dojo</h1>
+                    <select class="border-2 w-45" name="dojo" id="">
+                        <option value="None">select a dojo</option>
+
+                        {% for i in Dojos%}
+                        <option value="{{ i.id }}">{{i.name}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="flex justify-center">
+                    <button class="border-2 w-20 mt-10 bg-white shadow-[2px_2px]"> Add</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+    <div class=" w-[80%] mx-auto h-100 mt-8">
+        <h1 class="pb-10 text-4xl text-center">All the Dojos</h1>
+        {% for i in Dojos %}
+            <p class="text-2xl text-center">{{i.name}}--{{i.city}}--{{i.state}}</p>
+        {% for j in i.ninjas.all %}
+        <ul class="w-[8%] mx-auto">
+            <li class=" text-center list-disc text-2xl">{{j.first_name}}</li>
+        </ul>
+        {% endfor %}
+        {% endfor %}
+    </div>
+</body>
+</html>

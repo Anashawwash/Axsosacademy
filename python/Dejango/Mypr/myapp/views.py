@@ -1,6 +1,11 @@
 from django.shortcuts import render, HttpResponse
-
+from . import models
 
 
 def index(request):
-    return HttpResponse("this is the equivalent of @app.route('/')!")
+    context  = {
+        "users" : models.get_all_users()
+    }
+    
+    return render(request,'index.html',context)
+
