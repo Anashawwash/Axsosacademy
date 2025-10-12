@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class="mt-10 ml-39 flex items-center">
+        <h1 class="text-[24px] font-bold align-center">Your Gold:</h1>
+        <h2 class="ml-10 text-[20px] font-bold border w-30 pl-1">{{request.session.gold}}</h2>
+    </div>
+    <div class="w-400 ml-auto mr-auto mt-10 flex justify-between">
+        <div class="border w-60 h-50 text-center pt-4">
+            <form action="/get-gold" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="hidden_input" value="farm">
+                <h2 class="text-[25px] mb-7">Farm</h2>
+                <p class="text-[20px] mb-7">(earns 10-20 gold)</p>
+                <input class="border w-40 shadow-[3px_3px_3px_rgb(0,0,0)] bg-gray-50" type="submit" value="Find Gold!">
+                
+            </form>
+        </div>
+        <div class="border w-60 h-50 text-center pt-4">
+            <form action="/get-gold" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="hidden_input" value="cave">
+                <h2 class="text-[25px] mb-7">Cave</h2>
+                <p class="text-[20px] mb-7">(earns 10-20 gold)</p>
+                <input class="border w-40 shadow-[3px_3px_3px_rgb(0,0,0)] bg-gray-50" type="submit" value="Find Gold!">
+            </form>
+        </div>
+        <div class="border w-60 h-50 text-center pt-4">
+            <form action="/get-gold" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="hidden_input" value="house">
+                <h2 class="text-[25px] mb-7">House</h2>
+                <p class="text-[20px] mb-7">(earns 10-20 gold)</p>
+                <input class="border w-40 shadow-[3px_3px_3px_rgb(0,0,0)] bg-gray-50" type="submit" value="Find Gold!">
+            </form>
+        </div>
+        <div class="border w-60 h-50 text-center pt-4">
+            <form action="/get-gold" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="hidden_input"value="quest">
+                <h2 class="text-[25px] mb-4">Quest</h2>
+                <p class="text-[20px] mb-4 w-30 ml-auto mr-auto">(earns/takes 0-50 gold)</p>
+                <input class="border w-40 shadow-[3px_3px_3px_rgb(0,0,0)] bg-gray-50" type="submit" value="Find Gold!">
+            </form>
+        </div>
+    </div>
+    <h2 class="text-[20px] ml-39 mt-10">Activites:</h2>
+    <div class="border w-400 h-100 ml-auto mr-auto mt-10 overflow-scroll">
+        {% for i in request.session.activaties %}
+        {% if 'farm' in i or 'cave' in i or 'house' in i or 'complete' in i %}
+        <p class="text-green-500">{{i}}</p>
+        {% else %}
+        <p class="text-red-500">{{i}}</p>
+        {% endif %}
+        {% endfor %}
+    </div>
+</body>
+
+</html>
