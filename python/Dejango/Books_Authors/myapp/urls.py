@@ -4,10 +4,12 @@ from . import views
 urlpatterns = [
     path('',views.index),
     path('book',views.add_book),
-    path('author',views.add_author),
+    path('add_author',views.add_author),
     path('authors',views.none),
-    path('<slug:name>/<int:id>/',views.info_book),
+    path('book/<int:id>/',views.info_book ,name="book"),
     path('many',views.many),
+    path('author/<int:author_id>/',views.info_author ,name="author"),
+    path('many_author',views.many_author)
     
     
 

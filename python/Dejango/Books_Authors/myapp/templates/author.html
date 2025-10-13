@@ -10,7 +10,7 @@
 <body>
     <div class="flex">
 
-        <form action="/author" method="post">
+        <form action="/add_author" method="post">
             {% csrf_token %}
         <div class="w-110 ml-10 mt-10 h-100">
             <h1 class="text-4xl text-center">Add an Author</h1>
@@ -40,11 +40,11 @@
             <table class="w-[80%] border-2">
                 <tr>
                     <th class="w-15 border text-3xl">ID</th>
-                    <th class="text-3xl">Titel</th>
+                    <th class="text-3xl">Name</th>
                     <th class="text-3xl">Action</th>
                 </tr>
 
-                {% for i in books %}
+                {% for i in author %}
                 <tr class="even:bg-gray-500 border-2 w-[100%]">
                     <td class="pl-5 text-3xl">{{i.id}}</td>
                     <td class="pl-5 text-center text-3xl">{{i.first_name}}</td>

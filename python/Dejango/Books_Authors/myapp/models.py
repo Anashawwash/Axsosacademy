@@ -13,7 +13,7 @@ class books(models.Model):
     
     
 class authors(models.Model):
-    titel = models.CharField(max_length=200)
+    first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -34,7 +34,7 @@ def get_all_author():
     
     
 def add_author(fname ,lname ,note):
-    authors.objects.create(titel = fname ,last_name = lname , desc = note)
+    authors.objects.create(first_name = fname ,last_name = lname , desc = note)
     
 def info_book(id):
     return books.objects.get(id = id)
@@ -52,3 +52,11 @@ def ship(author_id , book_id):
 def authors_book(id):
     book = books.objects.get(id = id)
     return book.authors.all()
+
+
+def book_author(id):
+    author = authors.objects.get(id = id)
+    return author.Books.all()
+
+def info_author(id):
+    return authors.objects.get(id = id)
