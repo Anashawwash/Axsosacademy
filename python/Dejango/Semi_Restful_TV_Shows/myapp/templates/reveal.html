@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <h1 class="w-[80%] mx-auto mt-10 text-5xl"> All Shows</h1>
+
+    <table class="mt-10 mx-auto w-[80%] border-2">
+        <tr class="bg-gray-600 text-2xl">
+            <th class="border-r-2">ID</th>
+            <th class="border-r-2">Title</th>
+            <th class="border-r-2">Network</th>
+            <th class="border-r-2">Release Date</th>
+            <th class="border-r-2">Actions</th>
+        </tr>
+
+
+        {% for i in all %}
+        <tr class="odd:bg-gray-600 text-2xl text-center">
+            <td class="border-r-2 ">{{i.id}}</td>
+            <td class="border-r-2 ">{{i.Title}}</td>
+            <td class="border-r-2 ">{{i.network}}</td>
+            <td class="border-r-2 ">{{i.release_date}}</td>
+            <td><a class="text-blue-400 underline" href="shows/{{i.id}}">Show</a>  |  <a class="text-blue-400 underline" href="/shows/{{i.id}}/edit">Edit</a>  |  <a class="text-blue-400 underline" href="/delete/{{i.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+
+
+
+    </table>
+
+    <div class=" w-[80%] mx-auto mt-10">
+        <a class="text-2xl text-blue-400 underline" href="shows/new">Add a New Show</a>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
