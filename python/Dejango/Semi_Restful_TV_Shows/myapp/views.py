@@ -1,5 +1,7 @@
 from django.shortcuts import render , redirect
 from .models import *
+from django.contrib import messages
+
 # Create your views here.
 
 
@@ -7,12 +9,23 @@ def index(request):
     return render(request,"index.html")
 
 def creat_show(request):
-    title = request.POST['title']
-    network = request.POST['network']
-    Date = request.POST['date']
-    desc = request.POST['desc']
-    create_show(Title= title , network=network , release_date = Date , Desc= desc)
-    return redirect('shows')
+    errors = Shows.objects.validator(request.POST)
+    if len(errors) > 0:
+        for key, value in errors.items():
+            messages.error(request,value ,extra_tags= key )
+        return redirect('shows/new')
+    else:
+        title = request.POST['title']
+        network = request.POST['network']
+        Date = request.POST['date']
+        desc = request.POST['desc']
+        create_show(Title= title , network=network , release_date = Date , Desc= desc)
+        return redirect('shows')
+    
+    
+    
+    
+    
 
 
 def show(request):
@@ -40,11 +53,16 @@ def edit(request,edit_id):
     return render(request,'edit.html',all)
 
 def update(request ,update_id):
-    title = request.POST['title']
-    network = request.POST['network']
-    Date = request.POST['date']
-    desc = request.POST['desc']
-    update_show(id = update_id, title = title , net = network , date = Date , Desc = desc)
-    pass
-    return redirect('shows')
-    
+    errors = Shows.objects.validator(request.POST)
+    if len(errors) > 0:
+        for key,value in errors.items():
+            messages.error(request,value,extra_tags=key)
+        return redirect(f'/shows/{update_id}/edit')
+    else:
+        title = request.POST['title']
+        network = request.POST['network']
+        Date = request.POST['date']
+        desc = request.POST['desc']
+        update_show(id = update_id, title = title , net = network , date = Date , Desc = desc)
+        return redirect('shows')
+        

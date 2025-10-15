@@ -1,6 +1,21 @@
 from django.db import models
 
 # Create your models here.
+class show_manager(models.Manager):
+    
+    
+    def validator(self,postData):
+        error = {}
+        if len(postData['title']) < 2:
+            error["title"] = "Title should be at least 2 characters"
+        if len(postData['network']) < 3:
+            error["network"] = "Network should be at least 3 characters"
+        if len(postData['desc']) < 10 :
+            error['desc'] = "Description should be at least 10 characters" 
+        return error
+              
+
+
 
 
 class Shows(models.Model):
@@ -10,8 +25,17 @@ class Shows(models.Model):
     Description = models.TextField()
     updated_at = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    objects = show_manager()
+
+
     
-    
+
+
+
+
+
+
+
 def create_show(Title,network,release_date,Desc):
     Shows.objects.create(Title = Title , network = network , release_date = release_date,  Description = Desc)
     
