@@ -43,10 +43,8 @@ public class Cafe {
 
 
     
-        // APP INTERACTION SIMULATION (Add your code for the challenges below)
-        // Example:
-        System.out.println(generalGreeting + customer1); // Displays "Welcome to Cafe Java, Shatha"
-        // ** Your customer interaction print statements will go here ** //
+        System.out.println("The total: " + (latte + dripcofe) + " What he owes " + (latte - dripcofe));
+ 
     }
 }
 
