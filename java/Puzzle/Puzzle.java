@@ -39,5 +39,15 @@ public class Puzzle{
         return set;
     }
 
+    public String[] shuffle(String[] mylist){
+        for(int i = 0 ; i < 5 ; i ++){
+            int randomOne = ran.nextInt(mylist.length);
+            int randomTwo = ran.nextInt(mylist.length);
+            String temp = mylist[randomOne];
+            mylist[randomOne] = mylist[randomTwo];
+            mylist[randomTwo] = temp;
+        }
+    return mylist;
+    }
 
 }
