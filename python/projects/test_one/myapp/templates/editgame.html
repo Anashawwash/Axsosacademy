@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+     <header class="h-20 w-[90%] mx-auto border-b-2 border-black">
+        <div class="flex justify-between">
+            <div class="mt-2 flex">
+                <img src="data:image/png;base64,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"
+                    alt="" class="h-15 w-18">
+                <h1 class="text-4xl text-center ml-10 mt-3"> Welcome {{user.first_name}} {{user.last_name}}</h1>
+            </div>
+            <div class="flex align-middle">
+                <a href="/logout" class="text-blue-400 underline text-3xl mt-5">LOGOUT</a>
+            </div>
+
+        </div>
+    </header>
+    <!-- Edit Game Form -->
+        <div class="w-[50%] mx-auto mt-10 h-120 border-2">
+            <form action="/editgame" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="game_id" value="{{game.id}}">
+                <div class="mt-8 w-[80%] mx-auto flex justify-between">
+                    <h1 class="text-3xl">Game Name</h1>
+                    <div>
+                        <input class="border-2  w-60 h-9 placeholder:text-2xl placeholder:text-black" name="game_name" placeholder="{{game.name}}" required type="text">
+                        <ul class="text-xs text-red-500">{{all_messages.game_name}}</ul>
+                    </div>
+                </div>
+
+
+                <div class="mt-8 w-[80%] mx-auto flex justify-between">
+                    <h1 class="text-3xl">Genre</h1>
+                    <select class=" w-60 border-2 h-9" name="genre">
+                        <option value="{{game.genre}}" selected>{{game.genre}}</option>
+                        <option value="Action">Action</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Puzzle">Puzzle</option>
+                        <option value="Strategy">Strategy</option>
+                    </select>
+                </div>
+
+
+                <div class="mt-8 w-[80%] mx-auto flex justify-between">
+                    <h1 class="text-3xl">Release Date</h1>
+                    <div>
+                        <input class="border-2  w-60 h-9" placeholder="{{ game.release_date|date:"d, F, Y" }}" name="release_date" required type="date">
+                        <ul class="text-xs text-red-500">{{all_messages.release_date}}</ul>
+                    </div>
+                </div>
+
+                <div class="mt-8 w-[80%] mx-auto flex justify-between">
+                    <h1 class="text-3xl">Description</h1>
+                    <div>
+                        <textarea class="border-2 w-60 h-40 placeholder:text-black" placeholder="{{game.description}}" name="description" required></textarea>
+                        <ul class="text-xs text-red-500">{{all_messages.description}}</ul>
+                        <button class="w-60 h-9 border-2 shadow-[2px_2px_green] mt-2">Edit Game</button>
+                    </div>
+                </div>
+
+
+            </form>
+
+        </div>
+</body>
+</html>

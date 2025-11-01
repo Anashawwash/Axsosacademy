@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="flex w-[80%] mx-auto">
+        <div class="mt-10 h-200 w-[50%]">
+            <form class=" h-200 mx-auto" action="/adduser" method="post">
+                {% csrf_token%}
+                <input type="hidden" name="type" value="reg">
+                <h1 class="text-5xl text-center">Registration</h1>
+                <div class="mt-20 w-[80%] mx-auto flex justify-between">
+                    <h1 class="text-3xl">First Name</h1>
+                    <div>
+                        <input class="border-2 h-9 placeholder-red-800 placeholder:text-sm" placeholder="Anas"
+                            name="f_name" type="text">
+                        <ul class="text-sm text-red-400">{{ all_messages.f_name}}</ul>
+                    </div>
+                </div>
+
+
+
+
+                <div class="mt-8 mx-auto w-[80%] flex justify-between">
+                    <h1 class="text-3xl">Last Name</h1>
+                    <div>
+                        <input class="border-2 h-9 placeholder-red-800 placeholder:text-sm" placeholder="hawwas"
+                            name="l_name" type="text">
+                        <ul class="text-sm text-red-400">{{ all_messages.l_name}}</ul>
+                    </div>
+                </div>
+
+
+
+                <div class="mt-8 w-[80%] mx-auto flex justify-between">
+                    <h1 class="text-3xl">Email</h1>
+                    <div>
+                        <input class="border-2 h-9 placeholder-red-800 placeholder:text-sm" placeholder="user@gmail.com"
+                            name="email" type="text">
+                        <ul class="text-sm text-red-400">{{ all_messages.email_error}}</ul>
+                    </div>
+                </div>
+
+
+                <div class="mt-8 w-[80%] mx-auto flex justify-between">
+                    <h1 class="text-3xl">Password</h1>
+                    <div>
+                        <input class="border-2 h-9" name="password" type="password">
+                        <ul class="text-xs text-red-500">{{ all_messages.password}}</ul>
+                    </div>
+                </div>
+
+
+
+                <div class="mt-8 w-[80%] mx-auto flex justify-between">
+                    <h1 class="text-3xl">Confirm Password</h1>
+                    <div>
+                        <input class="h-9 border-2" name="con_pw" type="Password">
+                        <ul class="text-xs text-red-500">{{ all_messages.con_pw}}</ul>
+                    </div>
+                </div>
+
+
+
+                <div class="mt-8 w-[80%] mx-auto flex justify-center">
+                    <button class="border-2 w-40 text-2xl shadow-[3px_3px]">Register</button>
+                </div>
+                {% for message in messages %}
+                {% if 'email_exists' in message.tags %}
+                <h1 class="text-3xl text-red-800 text-center mt-10">{{message}}</h1>
+                {% endif %}
+                {% endfor %}
+
+            </form>
+        </div>
+        <div class="mt-10 w-[50%] h-200">
+            <form class="w-[90%] h-200 mx-auto" action="/adduser" method="post">
+                <input type="hidden" value="login" name="type">
+                {% csrf_token%}
+                <h1 class="text-5xl text-center">Login</h1>
+                <div class="mt-20 w-[80%] mx-auto flex justify-between">
+                    <h1 class="text-3xl">Email</h1>
+                    <div>
+                        <input placeholder="user@gmail.com" name="login_email"
+                            class="h-9 border-2 placeholder-red-800 placeholder:text-sm" type="text">
+                        <ul class="text-sm text-red-400">{{ all_messages.email}}</ul>
+                    </div>
+                </div>
+
+
+                <div class="mt-8 w-[80%] mx-auto flex justify-between">
+                    <h1 class="text-3xl">Password</h1>
+                    <div>
+                        <input name="login_password" class="border-2 h-9" type="password">
+                        <ul class="text-sm text-red-400">{{ all_messages.Password}}</ul>
+                    </div>
+                </div>
+
+
+
+                <div class="mt-8 w-[80%] mx-auto flex justify-center">
+                    <button class="border-2 w-40 text-2xl shadow-[3px_3px]">Log In</button>
+                </div>
+            </form>
+
+
+
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

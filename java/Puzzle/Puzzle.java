@@ -2,12 +2,12 @@ import java.util.Random;
 
 
 public class Puzzle{
-
     Random ran = new Random();
-    public  int[] getTenRolls(){
-        int[] array = new int[10];
-        for (int i = 0 ; i < 10 ; i++){
-            int nanNum = ran.nextInt(20);
+
+    public  int[] getTenRolls(int size,int endpoint){
+        int[] array = new int[size];
+        for (int i = 0 ; i < size ; i++){
+            int nanNum = ran.nextInt(endpoint + 1);
             array[i] = nanNum;
         }
         return array;
@@ -21,10 +21,10 @@ public class Puzzle{
     }
 
     public char[] generatePassword(){
-        String all = "abcdefghijklmnopqrstuvwxyz0123456789";
+        String all = "abcdefghijklmnopqrstuvwxyz0123456789@#$%*_!";
         char[] pass = new char[8];
         for ( int i = 0 ; i < 8 ; i++){
-            int num = ran.nextInt(38);
+            int num = ran.nextInt(all.length());
             pass[i]= all.charAt(num);
 
         }

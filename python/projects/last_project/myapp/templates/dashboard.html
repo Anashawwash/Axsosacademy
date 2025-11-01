@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+
+
+    <header class="h-20 w-[90%] mx-auto border-b-2 border-black">
+        <div class="flex justify-between">
+            <h1 class="text-4xl text-center ml-10 mt-3"> Welcome {{user.first_name}} to Developers Dashboard</h1>
+            <div class="flex align-middle">
+                <a href="/logout" class="text-blue-400 underline text-3xl mt-5">LOGOUT</a>
+            </div>
+
+        </div>
+    </header>
+
+
+
+
+
+    <form action="/createproject" method="get">
+        {% csrf_token %}
+        <div class="w-[90%] mt-12 mx-auto">
+            <button class="w-60 text-3xl border-2 shadow-[2px_2px] rounded-lg">Create Project +</button>
+        </div>
+    </form>
+    <div class="w-[90%] mx-auto mt-10 h-150 "">
+        <table class=" border-2 w-full">
+        <tr class="h-15 text-4xl">
+            <th class="border-r-2 text-start pl-4">ID</th>
+            <th class="border-r-2 text-start pl-4">Project Name</th>
+            <th class="border-r-2 text-start pl-4">Project owner</th>
+            <th class="border-r-2 text-start pl-4">Action</th>
+        </tr>
+        {% for pro in all_projects %}
+        <tr class="h-15 text-3xl even:bg-gray-400">
+            <td class="border-r-2 pl-4">{{ pro.id }}</td>
+            <td class="border-r-2 text-center underline"><a class=" text-blue-500" href="/project/{{ pro.id }}/">{{pro.project_name }}</a></td>
+            <td class="border-r-2 pl-4">{{ pro.project_owner.first_name }}</td>
+            <td class="border-r-2 pl-4">
+                {% if pro.project_owner.id == user.id %}
+                <form action="/delete/{{ pro.id }}/" method="post">
+                    <button
+                        class="text-3xl w-[90%] shadow-[2px_2px] bg-blue-400 mx-auto border-2 rounded-lg">Delete</button>
+                    {% csrf_token %}
+                </form>
+                {% else %}
+           
+                {% endif %}
+
+
+                {% if not all_projects_with_the_user and pro.project_owner.id != user.id %}
+                 <form action="/join/{{ pro.id }}/" method="post">
+                        <button class="text-3xl w-[90%] shadow-[2px_2px] bg-green-400 mx-auto border-2 rounded-lg">Join</button>
+                        {% csrf_token %}
+                    </form>
+                {% endif %}
+                {% for project in all_projects_with_the_user %}
+                   {% if pro.id == project.id %}
+                   <form action="/separate/{{ pro.id }}/" method="post">
+                       <button class="text-3xl w-[90%] shadow-[2px_2px] bg-green-400 mx-auto border-2 rounded-lg">separate -</button>
+                       {% csrf_token %}
+                   </form>
+                {% endif %}
+                   
+                {% endfor %} 
+                 {% for project in all_projects_with_the_user %}
+                   {% if pro.id != project.id and  pro.project_owner.id != user.id %}
+                    <form action="/join/{{ pro.id }}/" method="post">
+                        <button class="text-3xl w-[90%] shadow-[2px_2px] bg-green-400 mx-auto border-2 rounded-lg">Join</button>
+                        {% csrf_token %}
+                    </form>
+                   {% endif %}
+                {% endfor %} 
+
+
+            </td>
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

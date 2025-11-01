@@ -1,7 +1,10 @@
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public class CafeUtil{
+
 
     public int getStreakGoal(int numWeek){
         int sum = 0;
@@ -9,7 +12,7 @@ public class CafeUtil{
             sum += i;
         }
         return sum;
-    } 
+    }
 
     public int getOrderTotal(double[] lineItems){
         int sum =0;
@@ -26,12 +29,14 @@ public class CafeUtil{
             System.out.println(i + " " + menu.get(i));
         }
     }
+    
+
     public void addCustomer(ArrayList<String>customers){
         System.out.println("Enter your name please");
-        String username = System.console().readLine();
+        Scanner scanner = new Scanner(System.in);
+        String username = scanner.nextLine();
         System.out.println("Hello " + username + "! there are" + customers.size() + "people in front of you .");
         customers.add(username);
-
     }
-
 }
+

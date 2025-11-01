@@ -10,8 +10,9 @@ public class TestCafe {
     */
     CafeUtil appTest = new CafeUtil();
     
+
         
-        /* ============ App Test Cases ============= */
+    /* ============ App Test Cases ============= */
     
         System.out.println("\n----- Streak Goal Test -----");
         System.out.printf("Purchases needed by week 10: %s \n\n", appTest.getStreakGoal(10));
@@ -36,5 +37,6 @@ public class TestCafe {
             appTest.addCustomer(customers);
             System.out.println("\n");
         }
+        
     }
 }

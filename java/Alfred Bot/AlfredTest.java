@@ -4,6 +4,7 @@ public class AlfredTest {
     * For now, we are using the main to test all our 
     * AlfredQuotes methods.
     */
+          
     public static void main(String[] args) {
         // Make an instance of AlfredQuotes to access all its methods.
         AlfredQuotes alfredBot = new AlfredQuotes();
