@@ -15,6 +15,7 @@ public playGame(){
     System.out.println("play a Game");
     System.out.println("the battery Life is :" + this.battery);
 }
+
 public Charge(){
     if (this.battery > 50){
         this.battery = 100;

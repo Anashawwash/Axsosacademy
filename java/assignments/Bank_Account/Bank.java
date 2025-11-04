@@ -47,10 +47,9 @@ public class Bank{
         else{
             this.savingsBalance += value;
             totalMoney += value;
- 
         }
     }
- 
+
  
     // withdraw
     // - users should be able to withdraw money from their checking or savings account
@@ -74,6 +73,8 @@ public class Bank{
             System.out.println("your balnace is not enough");
         }
     }
+
+    
     // getBalance
     public double getBalance(){
         return (this.checkingBalance + this.savingsBalance);
@@ -81,6 +82,7 @@ public class Bank{
  
  
     // display total balance for checking and savings of a particular bank account
+    
         public void  displayGetBalance(){
             double y = this.checkingBalance + this.savingsBalance;
         System.out.println("you Total balance : "+y);

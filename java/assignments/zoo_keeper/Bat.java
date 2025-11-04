@@ -19,7 +19,6 @@ public class Bat extends Mammls{
     public void attackTown(){
         this.energy -= 100;
         System.out.println("is was cool and good");
-
     }
 
 }

@@ -42,7 +42,6 @@ public class Order{
         this.ready = ready;
     }
 
-
     // Getter
     public ArrayList getItems(){
         return this.items;
@@ -75,7 +74,6 @@ public class Order{
 
     // get the total of the order 
     public double getOrderTotal(){
-
         for(Item item : this.items){
             this.total += item.getPrice();
         }

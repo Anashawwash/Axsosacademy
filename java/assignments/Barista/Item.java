@@ -1,13 +1,17 @@
 public class Item{
-
+    static int max_Acu= 0;
     private String name;
     private double price;
+    private int id;
 
 
-    public Item(String n, double p){
-        this.name = n;
-        this.price = p; 
+    public Item(String name, double price){
+        max_Acu++;
+        this.id = max_Acu;
+        this.name = name;
+        this.price = price; 
     }
+
 
 
     // Getter
@@ -17,7 +21,7 @@ public class Item{
     // setter 
     public void changeName(String name){
         this.name = name;
-    } 
+    }
 
     // Getter
     public double getPrice(){
