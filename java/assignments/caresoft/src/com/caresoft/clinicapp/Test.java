@@ -1,5 +1,6 @@
 package com.caresoft.clinicapp;
-
+import com.caresoft.clinicapp.AdminUser;
+import com.caresoft.clinicapp.Physician;
 public class Test {
 	public static void main(String[] args) {
 		// .. Main method setup ... //

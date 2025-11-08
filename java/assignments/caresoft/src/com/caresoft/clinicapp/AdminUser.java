@@ -13,13 +13,15 @@ public class AdminUser extends User implements HIPAACompliantUser, HIPAAComplian
         this.setId(id);
         this.employeeID =id;
         this.role = role;
-
+        this.securityIncidents = new ArrayList<String>();
     }
     // TO DO: Implement HIPAACompliantUser!
         boolean assignPin(int pin){
         int length = String.valueOf(pin).length();
-        if (length >= 6)
+        if (length == 6){
+            this.pin = pin;
             return true;
+        }
         else
             return false;
     }
@@ -31,6 +33,9 @@ public class AdminUser extends User implements HIPAACompliantUser, HIPAAComplian
         else
         authIncident();
         return false;
+    }
+    public ArrayList<String> reportSecurityIncidents(){
+        return this.securityIncidents;
     }
 
     // TO DO: Implement HIPAACompliantAdmin!

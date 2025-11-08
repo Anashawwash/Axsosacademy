@@ -8,14 +8,19 @@ public class Physician extends User implements HIPAACompliantUser {
 	// TO DO: Constructor that takes an IDcopy
     public Physician(Integer id){
         this.setId(id);
+        this.PatientNotes = new ArrayList<String>();
     }
     // TO DO: Implement HIPAACompliantUser!
     boolean assignPin(int pin){
         int length = String.valueOf(pin).length();
-        if (length > 4)
-            return false;
-        else
+        if (length == 4){
+            this.pin = pin;
             return true;
+
+        }
+        else
+            return false;
+
     }
 
     boolean accessAuthorized(Integer confirmedAuthID){
