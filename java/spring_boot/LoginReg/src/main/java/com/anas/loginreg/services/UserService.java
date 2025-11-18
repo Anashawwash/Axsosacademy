@@ -25,7 +25,8 @@ public class UserService {
 
     public User NewUserVal(BindingResult result, User user){
         if (userRepo.findByEmail(user.getEmail()) != null){
-            result.rejectValue("email","Error","this email is User");
+            result.rejectValue("email","Error","this email is already taken");
+            return null;
         }
         if(!user.getPassword().equals(user.getConfirmPas())){
           result.rejectValue("confirmPas","Error","the Password did not match");

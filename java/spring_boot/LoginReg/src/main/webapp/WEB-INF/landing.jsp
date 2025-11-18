@@ -41,7 +41,7 @@
         <div class=" m-5">
             <div class="flex justify-between ">
             <form:label cssClass="text-4xl" path="password">Passowrd</form:label>
-            <form:input cssClass="w-[30%] border-2" path="password" />
+            <form:input cssClass="w-[30%] border-2" type="password" path="password" />
             </div>
             <div class="flex justify-end mr-5">
                 <form:errors cssClass="text-red-400" path="password"/>
@@ -50,7 +50,7 @@
         <div class=" m-5">
             <div class="flex justify-between ">
                 <form:label cssClass="text-4xl" path="confirmPas">Passowrd</form:label>
-                <form:input cssClass="w-[30%] border-2" path="confirmPas" />
+                <form:input cssClass="w-[30%] border-2" type="password" path="confirmPas" />
             </div>
             <div class="flex justify-end mr-5">
                 <form:errors cssClass="text-red-400" path="confirmPas"/>
@@ -77,7 +77,7 @@
         <div class=" m-5">
             <div class="flex justify-between ">
                 <form:label cssClass="text-4xl" path="confirm">Passowrd</form:label>
-                <form:input cssClass="w-[30%] border-2" path="confirm" />
+                <form:input cssClass="w-[30%]  border-2" type="password" path="confirm" />
             </div>
             <div class="flex justify-end mr-5">
                 <form:errors cssClass="text-red-400" path="confirm"/>
