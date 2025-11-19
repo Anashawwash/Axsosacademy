@@ -26,7 +26,7 @@
             <td class="border border-black px-4 py-2 align-top">
                 <c:forEach items="${products}" var="product">
                     <div>
-                        - <a href="#" class="text-blue-600 underline">${product.name}</a>
+                        - <a href="products/${product.id}" class="text-blue-600 underline">${product.name}</a>
                     </div>
                 </c:forEach>
             </td>
@@ -34,7 +34,7 @@
             <td class="border border-black px-4 py-2 align-top">
                 <c:forEach items="${categories}" var="category">
                     <div>
-                        - <a href="#" class="text-blue-600 underline">${category.name}</a>
+                        - <a href="category/${category.id}" class="text-blue-600 underline">${category.name}</a>
                     </div>
                 </c:forEach>
             </td>

@@ -2,11 +2,13 @@ package com.anas.productscategories.services;
 
 
 import com.anas.productscategories.models.Category;
+import com.anas.productscategories.models.Product;
 import com.anas.productscategories.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Iterator;
+import java.util.List;
 
 @Service
 public class CategoryServices {
@@ -24,5 +26,7 @@ public class CategoryServices {
     public Iterable<Category> getAllCategories(){
         return categoryRepo.findAll();
     }
+
+
 }
 

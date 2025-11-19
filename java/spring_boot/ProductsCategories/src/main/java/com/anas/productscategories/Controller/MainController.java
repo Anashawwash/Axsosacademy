@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
@@ -68,7 +69,11 @@ public class MainController {
     }
 
 
-
-
-
+    @GetMapping("/products/{id}")
+    public String doProducts(@ModelAttribute("ship") Product product,@PathVariable("id")Long id ,Model model){
+        model.addAttribute("product",productServ.getProduct(id));
+        model.addAttribute("categories",productServ.getAllCategoryBut(id));
+        model.addAttribute("categoriesNot",productServ.getAllNotForProduct(id));
+        return "productPage.jsp";
+    }
 }

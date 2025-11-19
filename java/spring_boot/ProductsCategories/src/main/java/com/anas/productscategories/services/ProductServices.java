@@ -1,5 +1,6 @@
 package com.anas.productscategories.services;
 
+import com.anas.productscategories.models.Category;
 import com.anas.productscategories.models.Product;
 import com.anas.productscategories.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +25,18 @@ public class ProductServices {
 
     public Iterable<Product> getAllProducts(){
         return productRepo.findAll();
+    }
+
+
+    public Product getProduct(Long id){
+        return productRepo.findById(id).get();
+    }
+
+    public  List<Category> getAllCategoryBut(Long id){
+        return productRepo.findCategoriesByProductId(id);
+    }
+
+    public List<Category> getAllNotForProduct(Long id){
+        return productRepo.findCategoriesNotInProductId(id);
     }
 }

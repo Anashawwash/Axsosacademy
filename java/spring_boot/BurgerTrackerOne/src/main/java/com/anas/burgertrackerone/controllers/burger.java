@@ -48,8 +48,7 @@ public class burger {
 
    @GetMapping("/edit/{id}")
     public String editBurger(@ModelAttribute("burger")Burger burger,@PathVariable("id")Long id,Model model){
-       Burger b = burgerservice.getBurger(id);
-        model.addAttribute("burger",b);
+        model.addAttribute("burger",burgerservice.getBurger(id));
         return "edit.jsp";
    }
 
