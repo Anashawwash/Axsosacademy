@@ -12,10 +12,18 @@ public class LoginUser {
     @Email(message="Please enter a valid email!")
     private String loginEmail;
 
-    @Transient
+
+    public String getConfarm() {
+        return confarm;
+    }
+
+    public void setConfarm(String confarm) {
+        this.confarm = confarm;
+    }
+
     @NotEmpty(message="Confirm Password is required!")
     @Size(min=8, max=128, message="Confirm Password must be between 8 and 128 characters")
-    private String confirm;
+    private String confarm;
 
     public String getLoginEmail() {
         return loginEmail;
@@ -25,13 +33,7 @@ public class LoginUser {
         this.loginEmail = loginEmail;
     }
 
-    public String getConfirm() {
-        return confirm;
-    }
 
-    public void setConfirm(String confirm) {
-        this.confirm = confirm;
-    }
 
     public LoginUser(){}
 }

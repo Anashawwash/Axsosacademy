@@ -32,11 +32,10 @@ public class UserService {
           result.rejectValue("confirmPas","Error","the Password did not match");
           return null;
         }
-
         try{
-            userRepo.save(user);
             String hashed = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
             user.setPassword(hashed);
+            userRepo.save(user);
         } catch (DataIntegrityViolationException e) {
             result.rejectValue("userName","Error","the Email or UserName it taken");
             result.rejectValue("email","Error","the Email or UserName it taken");
@@ -55,15 +54,12 @@ public class UserService {
             return null;
         }
         else{
-            if (!BCrypt.checkpw(loginUser.getConfirm(), user.getPassword())) {
+            if (!BCrypt.checkpw(loginUser.getConfarm(), user.getPassword())) {
                 result.rejectValue("confirm","Error","the Password or Email are invalid ");
                 return null;
-
             }
         }
         return user;
-
-
     }
 
 

@@ -47,12 +47,13 @@ public class MainController {
 
 
     @PostMapping("/login")
-    public String login(@Valid @ModelAttribute("loginUser") LoginUser loginUser,BindingResult result,@ModelAttribute("newUser") User user,HttpSession session){
+    public String login(@Valid @ModelAttribute("loginUser") LoginUser loginUser,BindingResult result,
+                        @ModelAttribute("newUser") User user,HttpSession session){
         if (result.hasErrors()) {
             return "landing.jsp";
         } else {
                 User newuser = userServ.LoginVal(result,loginUser);
-                if(user == null){
+                if(newuser == null){
                     return "landing.jsp";
                 }
                 else{
@@ -66,6 +67,9 @@ public class MainController {
     @GetMapping("/home")
     public String homePage(Model model ,HttpSession session){
         model.addAttribute("User",session.getAttribute("User"));
+        if (session.getAttribute("User") == null){
+            return  "redirect:/";
+        }
         return "home.jsp";
     }
 

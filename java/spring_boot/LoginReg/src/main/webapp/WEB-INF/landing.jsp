@@ -61,7 +61,7 @@
         </div>
     </form:form>
 
-
+<%--Login--%>
     <form:form action="/login" method="post" modelAttribute="loginUser">
 
         <div class=" m-5">
@@ -76,11 +76,11 @@
 
         <div class=" m-5">
             <div class="flex justify-between ">
-                <form:label cssClass="text-4xl" path="confirm">Passowrd</form:label>
-                <form:input cssClass="w-[30%]  border-2" type="password" path="confirm" />
+                <form:label cssClass="text-4xl" path="confarm">Passowrd</form:label>
+                <form:input cssClass="w-[30%]  border-2" type="password" path="confarm" />
             </div>
             <div class="flex justify-end mr-5">
-                <form:errors cssClass="text-red-400" path="confirm"/>
+                <form:errors cssClass="text-red-400" path="confarm"/>
             </div>
         </div>
 
