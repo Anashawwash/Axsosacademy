@@ -32,11 +32,4 @@ public class ProductServices {
         return productRepo.findById(id).get();
     }
 
-    public  List<Category> getAllCategoryBut(Long id){
-        return productRepo.findCategoriesByProductId(id);
-    }
-
-    public List<Category> getAllNotForProduct(Long id){
-        return productRepo.findCategoriesNotInProductId(id);
-    }
 }

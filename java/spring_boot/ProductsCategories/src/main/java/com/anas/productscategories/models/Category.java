@@ -24,7 +24,7 @@ public class Category{
             joinColumns = @JoinColumn(name = "Category-id"),
             inverseJoinColumns = @JoinColumn(name ="products_id" )
     )
-    private List<Product> categories;
+    private List<Product> products;
 
     @Column(updatable = false)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -51,11 +51,11 @@ public class Category{
         this.name = name;
     }
 
-    public List<Product> getCategories() {
-        return categories;
+    public List<Product> getProducts() {
+        return products;
     }
 
-    public void setCategories(List<Product> categories) {
-        this.categories = categories;
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }

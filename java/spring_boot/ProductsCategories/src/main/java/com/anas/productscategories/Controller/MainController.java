@@ -72,8 +72,21 @@ public class MainController {
     @GetMapping("/products/{id}")
     public String doProducts(@ModelAttribute("ship") Product product,@PathVariable("id")Long id ,Model model){
         model.addAttribute("product",productServ.getProduct(id));
-        model.addAttribute("categories",productServ.getAllCategoryBut(id));
-        model.addAttribute("categoriesNot",productServ.getAllNotForProduct(id));
+        model.addAttribute("categoriesNot",categoryServ.getAllCategoryForNotBroduct(productServ.getProduct(id)));
+        model.addAttribute("categories",categoryServ.getAllCategoryForBroduct(productServ.getProduct(id)));
         return "productPage.jsp";
+    }
+
+
+    @PostMapping("/products/{id}/addCategory")
+    public String addCategoryForItem(@PathVariable("id") Long id, @ModelAttribute("ship")Product product){
+        Category category = product.getCategories().getFirst();
+        Product trueProduct = productServ.getProduct(id);
+        trueProduct.getCategories().add(category);
+        productServ.saveProduct(trueProduct);
+        return "productPage.jsp";
+
+
+
     }
 }

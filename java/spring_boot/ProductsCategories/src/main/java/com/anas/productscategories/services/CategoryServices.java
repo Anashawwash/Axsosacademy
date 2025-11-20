@@ -7,7 +7,6 @@ import com.anas.productscategories.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Iterator;
 import java.util.List;
 
 @Service
@@ -28,5 +27,13 @@ public class CategoryServices {
     }
 
 
+    public List<Category> getAllCategoryForNotBroduct(Product product){
+        return categoryRepo.findByproductsNotContaining(product);
+    }
+
+
+    public List<Category> getAllCategoryForBroduct(Product product){
+        return categoryRepo.findByproductsContaining(product);
+    }
 }
 
