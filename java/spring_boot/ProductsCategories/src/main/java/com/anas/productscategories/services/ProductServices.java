@@ -32,4 +32,13 @@ public class ProductServices {
         return productRepo.findById(id).get();
     }
 
+
+    public List<Product> getAllProductForCategory(Category category){
+        return productRepo.findByCategoriesContaining(category);
+    }
+
+    public List<Product> getAllProductNotForCategory(Category category){
+        return productRepo.findByCategoriesNotContains(category);
+    }
+
 }

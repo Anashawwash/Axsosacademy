@@ -10,10 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class MainController {
@@ -63,14 +60,14 @@ public class MainController {
             return "category.jsp";
         }
         else{
-            categoryServ.saveProduct(category);
+            categoryServ.saveCategory(category);
             return "redirect:/";
         }
     }
 
 
     @GetMapping("/products/{id}")
-    public String doProducts(@ModelAttribute("ship") Product product,@PathVariable("id")Long id ,Model model){
+    public String doProducts(@PathVariable("id")Long id ,Model model){
         model.addAttribute("product",productServ.getProduct(id));
         model.addAttribute("categoriesNot",categoryServ.getAllCategoryForNotBroduct(productServ.getProduct(id)));
         model.addAttribute("categories",categoryServ.getAllCategoryForBroduct(productServ.getProduct(id)));
@@ -79,14 +76,49 @@ public class MainController {
 
 
     @PostMapping("/products/{id}/addCategory")
-    public String addCategoryForItem(@PathVariable("id") Long id, @ModelAttribute("ship")Product product){
-        Category category = product.getCategories().getFirst();
+    public String addCategoryForItem(@PathVariable("id") Long id, @RequestParam("category") Long Cat_id,Model model){
+        model.addAttribute("categoriesNot",categoryServ.getAllCategoryForNotBroduct(productServ.getProduct(id)));
+        model.addAttribute("categories",categoryServ.getAllCategoryForBroduct(productServ.getProduct(id)));
+        model.addAttribute("product",productServ.getProduct(id));
+        if (Cat_id == 0){
+            return "productPage.jsp";
+        }
+        else{
+        Category cat = categoryServ.getCategoryById(Cat_id);
         Product trueProduct = productServ.getProduct(id);
-        trueProduct.getCategories().add(category);
+        trueProduct.getCategories().add(cat);
         productServ.saveProduct(trueProduct);
-        return "productPage.jsp";
+        return "redirect:/products/"+ id ;
+        }
+    }
 
 
+    @GetMapping("/category/{id}")
+    public String doCroduct(@PathVariable("id")Long id,Model model){
+        Category category = categoryServ.getCategoryById(id);
+        model.addAttribute("category",category);
+        model.addAttribute("productnot",productServ.getAllProductNotForCategory(category));
+        model.addAttribute("product",productServ.getAllProductForCategory(category));
+        return "CategoryPage.jsp";
+
+    }
+
+
+    @PostMapping("/category/{id}/addProduct")
+    public String addProductToCategory(@PathVariable("id") Long id , Model model , @RequestParam("product") Long Pro_id){
+        Category category = categoryServ.getCategoryById(id);
+        model.addAttribute("category",category);
+        model.addAttribute("productnot",productServ.getAllProductNotForCategory(category));
+        model.addAttribute("product",productServ.getAllProductForCategory(category));
+        if (Pro_id == 0){
+            return "CategoryPage.jsp";
+        }
+        else{
+            Product product = productServ.getProduct(id);
+            category.getProducts().add(product);
+            categoryServ.saveCategory(category);
+            return "redirect:/category/"+ id ;
+        }
 
     }
 }

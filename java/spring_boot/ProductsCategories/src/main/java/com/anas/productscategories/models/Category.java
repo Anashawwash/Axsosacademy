@@ -22,7 +22,7 @@ public class Category{
     @JoinTable(
             name = "categories_products",
             joinColumns = @JoinColumn(name = "Category-id"),
-            inverseJoinColumns = @JoinColumn(name ="products_id" )
+            inverseJoinColumns = @JoinColumn(name ="product-id" )
     )
     private List<Product> products;
 

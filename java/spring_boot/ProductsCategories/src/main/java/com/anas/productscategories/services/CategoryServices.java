@@ -17,7 +17,7 @@ public class CategoryServices {
 
 
 
-    public void saveProduct(Category category){
+    public void saveCategory(Category category){
         categoryRepo.save(category);
     }
 
@@ -34,6 +34,11 @@ public class CategoryServices {
 
     public List<Category> getAllCategoryForBroduct(Product product){
         return categoryRepo.findByproductsContaining(product);
+    }
+
+
+    public Category getCategoryById(Long id ){
+        return categoryRepo.findById(id).get();
     }
 }
 

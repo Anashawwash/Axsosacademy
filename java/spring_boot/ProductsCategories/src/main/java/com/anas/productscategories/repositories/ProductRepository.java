@@ -11,5 +11,7 @@ import java.util.List;
 @Repository
 public interface ProductRepository extends CrudRepository<Product,Long>{
 
+    List<Product> findByCategoriesContaining(Category category);
 
+    List<Product> findByCategoriesNotContains(Category category);
 }

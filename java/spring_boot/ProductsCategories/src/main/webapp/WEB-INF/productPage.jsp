@@ -31,17 +31,16 @@
     </div>
     <hr class="mb-6 border-black"/>
 
-    <!-- Add Category Form -->
-    <form:form method="POST" modelAttribute="ship" action="/products/${product.id}/addCategory">
-
+    <form method="post" action="/products/${product.id}/addCategory">
         <label for="categoryId" class="block mb-2 font-semibold">Add Category:</label>
-        <form:select path="categories" class="w-full border border-black rounded-sm px-2 py-1 mb-4 cursor-pointer">
-            <form:options items="${categoriesNot}" itemValue="id" itemLabel="name"/>
-        </form:select>
-
-        <input type="submit" value="Add"
-               class="w-full border border-black rounded-sm px-2 py-2 cursor-pointer bg-white hover:bg-gray-100"/>
-    </form:form>
+        <select name="category" class="w-full border border-black rounded-sm px-2 py-1 mb-4 cursor-pointer">
+            <option value="0" selected >Category</option>
+            <c:forEach items="${categoriesNot}" var="category">
+            <option value="${category.id}">${category.name}</option>
+            </c:forEach>
+        </select>
+        <input type="submit" value="Add" class="w-full border border-black rounded-sm px-2 py-2 cursor-pointer bg-white hover:bg-gray-100"/>
+    </form>
 
 </div>
 
