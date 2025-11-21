@@ -1,11 +1,13 @@
-package com.anas.bookclub.models;
-
+package com.anas.bookclub.Models;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
-import org.aspectj.bridge.IMessageContext;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -35,6 +37,9 @@ public class User{
     private String confirmPas;
 
 
+    @OneToMany(mappedBy = "user" , fetch = FetchType.LAZY)
+    private List<Book> books;
+
     @Column(updatable = false)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date createdAt;
@@ -42,9 +47,19 @@ public class User{
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date updatedAt;
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
+    }
 
 
-    public User(){}
 //_______________all methods Starts from here ___________________
 
     @PrePersist

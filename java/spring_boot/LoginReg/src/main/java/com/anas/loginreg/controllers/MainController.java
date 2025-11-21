@@ -53,7 +53,7 @@ public class MainController {
             return "landing.jsp";
         } else {
                 User newuser = userServ.LoginVal(result,loginUser);
-                if(user == null){
+                if(newuser == null){
                     return "landing.jsp";
                 }
                 else{
