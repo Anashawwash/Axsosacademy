@@ -1,0 +1,42 @@
+class Ninja{
+    constructor(name , helth,speed,strength){
+        this.name = name
+        this.helth = helth
+        this.speed = speed
+        this.strength = strength
+    }
+// this function for name
+    sayName(){
+        console.log(this.name)
+    }
+
+    // this a way for the ninja to increas thear helth
+    drinkSake(){
+        this.helth += 10;
+    }
+
+    // this is a way for print all the info about any ninja 
+    showStatus(obj){
+        console.log(obj)
+
+    }
+}
+
+
+const ninja = new Ninja("anas" , 10,3)
+ninja.showStatus(ninja)
+
+
+
+
+class Sensei extends Ninja{
+    constructor(name ){
+        super(name , 200 , 10,10)
+        this.wisdom=10
+    }
+
+    speakWisdom(){
+        super.drinkSake()
+        console.log("random message ")
+    }
+}

@@ -22,5 +22,6 @@ class Ninja{
     }
 }
 
+
 const ninja = new Ninja("anas" , 10)
 ninja.showStatus(ninja)
