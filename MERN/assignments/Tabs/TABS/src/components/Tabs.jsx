@@ -38,7 +38,12 @@ const Tabs = props =>{
         <button id="three" onClick={(e)=>chaneContant(e,3)} className={"text-2xl mr-3 border-2 w-40 hover:bg-black hover:text-white"}>Tab 3</button>
     </div>
     <div className={"border-2 h-100 w-150 mx-auto"}> 
-        {one && (<p>Tab 1 content is showing here</p>)}
+        {
+            one ?
+            <p>Tab 1 content is showing here</p> :
+            <p>Noooooooo</p>
+        
+        }
         {two && (<p>Tab 2 content is showing here</p>)}
         {three && (<p>Tab 3 content is showing here</p>)}
     </div>
