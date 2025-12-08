@@ -6,11 +6,16 @@ const Tabs = props =>{
         console.log(dive);
         const newp = document.getElementById("con")
 
-        document.getElementById("one").classList.remove("bg-green-500");
-        document.getElementById("two").classList.remove("bg-green-500");
-        document.getElementById("three").classList.remove("bg-green-500");
+        document.getElementById("one").classList.remove("bg-black");
+        document.getElementById("two").classList.remove("bg-black");
+        document.getElementById("three").classList.remove("bg-black");
+        document.getElementById("one").classList.remove("text-white");
+        document.getElementById("two").classList.remove("text-white");
+        document.getElementById("three").classList.remove("text-white");
 
-        e.target.classList.add("bg-green-500");
+        e.target.classList.add("bg-black");
+        e.target.classList.add("text-white");
+
 
         if (type === 1){
             newp.textContent = "Tab 1 content is showing here";
