@@ -8,7 +8,7 @@ const Login =({label,type,setlabel ,length , isConfirm}) =>{
                 isConfirm !== e.target.value ? setErrorTwo(`${label} dos't match the passowrd`)
                 :setErrorTwo("") 
             }
-            if (e.target.value.length <= length){
+            if (e.target.value.length < length && e.target.value.length != 0){
                 setError(`${label} should be at least ${length} `)
             }else{
                 setError("")
