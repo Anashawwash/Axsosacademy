@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Login from './components/Login'
+import Show from './components/show'
 
 function App() {
   const [fName,setFName] = useState("")
@@ -21,7 +22,15 @@ function App() {
     <Login label ="Password"  type={"password"} setlabel ={setPassword}/>
     <Login label ="Confirm Password"  type={"password"} setlabel ={setCPassword} />
     </div>
-    <h1>Your Form Data</h1>
+    <div className={"w-140 border-2 mx-auto"}>
+    <h1 className={"text-center text-4xl"}>Your Form Data</h1>
+
+    </div>
+    <Show label="First Name"  data ={fName} />
+    <Show label="Last Name"  data ={lName} />
+    <Show label="Email"  data ={email} />
+    <Show label="Passowrd"  data ={passowrd} />
+    <Show label="Confirm Password"  data ={cPassowrd} />
 
     </>
   )
