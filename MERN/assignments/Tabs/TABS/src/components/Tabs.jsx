@@ -39,10 +39,7 @@ const Tabs = props =>{
     </div>
     <div className={"border-2 h-100 w-150 mx-auto"}> 
         {
-            one ?
-            <p>Tab 1 content is showing here</p> :
-            <p>Noooooooo</p>
-        
+            one ? <p>Tab 1 content is showing here</p> : <p>No</p>
         }
         {two && (<p>Tab 2 content is showing here</p>)}
         {three && (<p>Tab 3 content is showing here</p>)}
