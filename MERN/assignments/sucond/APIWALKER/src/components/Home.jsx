@@ -7,6 +7,7 @@ const Home = () => {
     const [res, setRes] = useState([])
     const [error, setError] = useState("")
 
+    
 
     const changeV = async (e, type) => {
         if(type == 1) setWelker(e.target.value)
