@@ -1,0 +1,52 @@
+use myFirstDB
+
+db.createCollection("studants")
+
+db.studants.insertOne({name: STRING, home_state: STRING, lucky_number: NUMBER, birthday: {month: NUMBER, day: NUMBER, year: NUMBER}})
+
+db.studants.insertOne({name: STRING, home_state: STRING, lucky_number: NUMBER, birthday: {month: NUMBER, day: NUMBER, year: NUMBER}})
+
+db.studants.insertOne({name: STRING, home_state: STRING, lucky_number: NUMBER, birthday: {month: NUMBER, day: NUMBER, year: NUMBER}})
+
+db.studants.insertOne({name: STRING, home_state: STRING, lucky_number: NUMBER, birthday: {month: NUMBER, day: NUMBER, year: NUMBER}})
+
+db.studants.insertOne({name: STRING, home_state: STRING, lucky_number: NUMBER, birthday: {month: NUMBER, day: NUMBER, year: NUMBER}})
+
+db.studants.find()
+
+
+db.studants.insertOne({name: "Omar", home_state: "Nablus", lucky_number: 333, birthday: {month: 3, day: 5, year: 1}})
+{
+
+
+db.studants.find({name:"Omar"})
+
+[
+  {
+    _id: ObjectId('693ffcfb0f1b3f108ed76cf5'),
+    name: 'Omar',
+    home_state: 'Nablus',
+    lucky_number: 333,
+    birthday: { month: 3, day: 5, year: 1 }
+  }
+]
+
+
+
+db.studants.find({lucky_number:{    "$gt":3}})
+
+db.studants.update({},{$set:{intrest:["one","two"]})
+
+
+db.ninjas.updateOne({_id: 1}, {$pull: {insets: "taxes"})
+
+
+db.studants.delete({homeState: "Anas"})
+
+db.studants.deleteMany({home:"California"})
+
+db.studants.deleteOne({name:"Anas"})
+
+db.studants.update({},{$set:{number Of :0})
+
+db.studants.update({},{$set:{number Of :1})
