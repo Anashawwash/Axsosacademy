@@ -4,14 +4,24 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import CreatePro from './components/Create'
 import CreateForm from './components/CreateForm'
-
+import { Routes, Route, Link } from 'react-router-dom'
+import ShowPro from './components/showPro'
 function App() {
   const [count, setCount] = useState(0)
+  const [boo, setBoo] = useState(false)
 
   return (
     <>
-      <CreateForm/>
-      <CreatePro/>
+    <Routes>
+      <Route path='/' element={
+        <div>
+          <CreateForm setStaatus= {setBoo} status ={boo} />
+          <CreatePro status = {boo} />
+          </div>
+      }/>
+    <Route path='/product/:id' element={<ShowPro/>}/>
+  </Routes>
+
     </>
   )
 }

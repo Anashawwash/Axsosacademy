@@ -21,3 +21,15 @@ module.exports.getAllProducts = (req,res)=>{
         res.json(err)
     })
 }
+
+module.exports.getProductById = async (req,res)=>{
+    try{
+        const product = await Product.findById(req.params.id)
+        res.json(product)
+        // console.log(product);
+    }catch(err){
+        res.json({
+            err
+        })
+    }
+}
