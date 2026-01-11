@@ -1,0 +1,37 @@
+{
+  "pages": {
+    "/_app": [
+      "static/chunks/9b724_next_dist_compiled_fc4af6c2._.js",
+      "static/chunks/9b724_next_dist_shared_lib_ab8ce8c0._.js",
+      "static/chunks/9b724_next_dist_client_d4b5c178._.js",
+      "static/chunks/9b724_next_dist_ca32c416._.js",
+      "static/chunks/9b724_next_app_a302fcdb.js",
+      "static/chunks/[next]_entry_page-loader_ts_d456320d._.js",
+      "static/chunks/9b724_react-dom_a25aa8c2._.js",
+      "static/chunks/9b724_499c64a1._.js",
+      "static/chunks/[root-of-the-server]__c6834d18._.js",
+      "static/chunks/Desktop_learning_Axsosacademy_Next_js_firstPro_pages__app_2da965e7._.js",
+      "static/chunks/turbopack-Desktop_learning_Axsosacademy_Next_js_firstPro_pages__app_c99a2770._.js"
+    ],
+    "/_error": [
+      "static/chunks/9b724_next_dist_compiled_fc4af6c2._.js",
+      "static/chunks/9b724_next_dist_shared_lib_bfedc77b._.js",
+      "static/chunks/9b724_next_dist_client_d4b5c178._.js",
+      "static/chunks/9b724_next_dist_4d3d4d54._.js",
+      "static/chunks/9b724_next_error_b835bfa4.js",
+      "static/chunks/[next]_entry_page-loader_ts_7a5192ee._.js",
+      "static/chunks/9b724_react-dom_a25aa8c2._.js",
+      "static/chunks/9b724_499c64a1._.js",
+      "static/chunks/[root-of-the-server]__a6d7d26e._.js",
+      "static/chunks/Desktop_learning_Axsosacademy_Next_js_firstPro_pages__error_2da965e7._.js",
+      "static/chunks/turbopack-Desktop_learning_Axsosacademy_Next_js_firstPro_pages__error_83b7c110._.js"
+    ]
+  },
+  "devFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [
+    "static/development/_ssgManifest.js",
+    "static/development/_buildManifest.js"
+  ],
+  "rootMainFiles": []
+}

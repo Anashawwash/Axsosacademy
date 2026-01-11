@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///Users/anashawwash/Desktop/learning/Axsosacademy/Next.js/firstPro/app/page.jsx"],"sourcesContent":["import e from 'express';\nimport { useState } from 'react';\n \nfunction Header({ title }) {\n  return <h1>{title ? title : 'Default title'}</h1>;\n}\n \nfunction HomePage() {\n  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];\n \n  const [likes, setLikes] = useState(0);\n \n  function handleClick() {\n    setLikes(likes + 1);\n  }\n \n  return (\n    <div>\n      <Header title=\"Develop. Preview. Ship.\" />\n      <ul>\n        {names.map((name) => (\n          <li key={name}>{name}</li>\n        ))}\n      </ul>\n \n      <button onClick={handleClick}>Like ({likes})</button>\n    </div>\n  );\n}\n\nexport default HomePage;"],"names":[],"mappings":";;;;;AAAA;AACA;;;;AAEA,SAAS,OAAO,EAAE,KAAK,EAAE;IACvB,qBAAO,+SAAC;kBAAI,QAAQ,QAAQ;;;;;;AAC9B;AAEA,SAAS;IACP,MAAM,QAAQ;QAAC;QAAgB;QAAgB;KAAoB;IAEnE,MAAM,CAAC,OAAO,SAAS,GAAG,IAAA,kRAAQ,EAAC;IAEnC,SAAS;QACP,SAAS,QAAQ;IACnB;IAEA,qBACE,+SAAC;;0BACC,+SAAC;gBAAO,OAAM;;;;;;0BACd,+SAAC;0BACE,MAAM,GAAG,CAAC,CAAC,qBACV,+SAAC;kCAAe;uBAAP;;;;;;;;;;0BAIb,+SAAC;gBAAO,SAAS;;oBAAa;oBAAO;oBAAM;;;;;;;;;;;;;AAGjD;uCAEe"}}]
+}
