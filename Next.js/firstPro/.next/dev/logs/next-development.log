@@ -1,0 +1,163 @@
+[00:00:00.701] Server  LOG     ✓ Ready in 482ms
+[00:00:02.388] Server  ERROR   ⨯ ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js:1:10
+Ecmascript file had an error
+> 1 | import { useState } from 'react';
+    |          ^^^^^^^^
+  2 |
+  3 | export default function LikeButton() {
+  4 |     
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/page.jsx
+
+
+[00:00:02.743] Browser ERROR   uncaughtError: Error: ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js:1:10
+Ecmascript file had an error
+> 1 | import { useState } from 'react';
+    |          ^^^^^^^^
+  2 |
+  3 | export default function LikeButton() {
+  4 |     
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/page.jsx
+
+
+[00:00:02.748] Server  ERROR   ⨯ ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js:1:10
+Ecmascript file had an error
+> 1 | import { useState } from 'react';
+    |          ^^^^^^^^
+  2 |
+  3 | export default function LikeButton() {
+  4 |     
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/page.jsx
+
+
+[00:00:02.829] Browser ERROR   uncaughtError: Error: ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js:1:10
+Ecmascript file had an error
+> 1 | import { useState } from 'react';
+    |          ^^^^^^^^
+  2 |
+  3 | export default function LikeButton() {
+  4 |     
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/page.jsx
+
+
+[00:00:02.989] Browser ERROR   ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js:1:10
+Ecmascript file had an error
+> 1 | import { useState } from 'react';
+    |          ^^^^^^^^
+  2 |
+  3 | export default function LikeButton() {
+  4 |     
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/page.jsx
+[00:00:03.321] Browser ERROR   ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js:1:10
+Ecmascript file had an error
+> 1 | import { useState } from 'react';
+    |          ^^^^^^^^
+  2 |
+  3 | export default function LikeButton() {
+  4 |     
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/page.jsx
+[00:00:44.214] Browser ERROR   ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js:2:10
+Ecmascript file had an error
+  1 |
+> 2 | import { useState } from 'react';
+    |          ^^^^^^^^
+  3 |
+  4 | export default function LikeButton() {
+  5 |     
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/page.jsx
+[00:00:46.214] Browser ERROR   ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js:2:10
+Ecmascript file had an error
+  1 | use
+> 2 | import { useState } from 'react';
+    |          ^^^^^^^^
+  3 |
+  4 | export default function LikeButton() {
+  5 |     
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/page.jsx
+[00:00:53.215] Browser ERROR   ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js:1:5
+Parsing ecmascript source code failed
+> 1 | use client';
+    |     ^^^^^^
+  2 | import { useState } from 'react';
+  3 |
+  4 | export default function LikeButton() {
+
+Expected ';', '}' or <eof>
+
+Import trace:
+  Server Component:
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/like-button.js
+    ./Desktop/learning/Axsosacademy/Next.js/firstPro/app/page.jsx
+[00:00:54.956] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:59.534] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
